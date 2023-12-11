@@ -28,7 +28,7 @@ for index, todo in enumerate(todos):
         functions.write_todos(todos)
         # Let's also delete the session and rerun the code. It's needed for checkboxes.
         del st.session_state[todo]
-        st.experimental_rerun()
+        st.rerun()
 
 st.text_input(label="Enter a new todo on the list:", placeholder="Add new todo...", on_change=add_todo, key="new_todo")
 
